@@ -1,0 +1,64 @@
+*,
+::after,
+::before {
+  /* font-family: 'Lexend Deca', sans-serif; */
+  font-family: 'Baloo 2', cursive;
+  color: #fff;
+}
+.container {
+  max-width: 900px;
+}
+header {
+  background-color: #222831;
+}
+.logo {
+  max-width: 10rem;
+}
+.icon-bank {
+  width: 90px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+}
+.icon-momo {
+  max-width: 40px;
+  border-radius: 10px;
+}
+main {
+  background-color: #393E46;
+  overflow: hidden;
+  position: relative;
+}
+.text-h1 {
+  font-size: 2.2rem;
+}
+.text-h2 {
+  font-size: 1.7rem;
+}
+.text-h3 {
+  font-size: 1.3rem;
+}
+.bank-item {
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px #222831;
+  background: #222831;
+  padding: 0.7rem 1.5rem 0.5rem;
+  cursor: pointer;
+}
+.note {
+  margin-left: 5px;
+  display: inline;
+  background: #F5BF59;
+  position: relative;
+  box-shadow: 0 0 0 2px #F5BF59;
+  padding: 0 2px;
+  border-radius: 2px;
+  color: #393E46;
+  font-size: 0.9em;
+}
+.qr-code {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}

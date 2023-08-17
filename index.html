@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://hnamcoder.com/wp-content/uploads/2021/04/favicon-hnamcoder.png" sizes="32x32">
+    <title>HNC Banks</title>
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/jquery-3.7.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+</head>
+<body>
+    <header id="masthead" class="site-header">
+        <div class="container">
+            <div class="row justify-content-center py-1 py-lg-2">
+                <div class="col-12 col-lg-3 text-center">
+                    <img class="logo" src="images/logo-hainam.png" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="py-2 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <div class="qr-code">
+                        <img class="w-100 qr-code-img" src="" />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="bank-list">
+                        <div class="d-flex fw-bold text-h1">
+                            <div class="field__label me-3">Tên TK:</div>
+                            <div class="">ĐÀO HẢI NAM</div>
+                        </div>
+                        <div class="note fw-bold">Click vào để hiển thị QR</div>
+                        <div class="mb-2"></div>
+                        <div class="bank-item mb-2" data-bank="BIDV" data-stk="13310000015224">
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="icon-bank me-3" src="images/BIDV.png" />
+                                <div class="field__label text-decoration-underline ">Ngân hàng BIDV</div>
+                            </div>
+                            <div class="field__value fw-bold text-h3">STK: 13310000015224</div>
+                        </div>
+                        <div class="bank-item mb-2" data-bank="VCB" data-stk="0071001097616">
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="icon-bank me-3" src="images/VCB.png" />
+                                <div class="field__label text-decoration-underline ">Ngân hàng VIETCOMBANK</div>
+                            </div>
+                            <div class="field__value fw-bold text-h3">STK: 0071001097616</div>
+                        </div>
+                        <div class="bank-item mb-2" data-bank="TCB" data-stk="19034497350010">
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="icon-bank me-3" src="images/TCB.png" />
+                                <div class="field__label text-decoration-underline ">Ngân hàng TECHCOMBANK</div>
+                            </div>
+                            <div class="field__value fw-bold text-h3">STK: 19034497350010</div>
+                        </div>
+                        <div class="bank-item mb-3" data-bank="MOMO" data-url="images/momo-qr.jpg">
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="icon-momo me-3" src="images/momo_icon.png" />
+                                <div class="field__label text-decoration-underline ">Ví điện tử MOMO</div>
+                            </div>
+                            <div class="field__value fw-bold text-h3">SĐT: 0363759943</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
