@@ -5,6 +5,10 @@
   font-family: 'Baloo 2', cursive;
   color: #fff;
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
 .container {
   max-width: 900px;
 }
@@ -14,9 +18,9 @@ header {
 .logo {
   max-width: 10rem;
 }
-.icon-bank {
-  width: 90px;
-  height: 34px;
+.bank-item .icon-bank {
+  max-width: 80px;
+  padding: 5px;
   border-radius: 10px;
   border: 1px solid #e3e3e3;
   background: #fff;
@@ -46,6 +50,9 @@ main {
   padding: 0.7rem 1.5rem 0.5rem;
   cursor: pointer;
 }
+.bank-item.active{
+  background-color: #0b0e12;
+}
 .note {
   margin-left: 5px;
   display: inline;
@@ -61,4 +68,18 @@ main {
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  padding: 20px;
+}
+.qr-code .icon-bank-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.qr-code .icon{
+  max-width: 200px;
+  max-height: 70px;
+  display: block;
+  margin: 0 auto;
 }
