@@ -4,7 +4,11 @@ jQuery(document).ready(function ($) {
   let bankNumber = $(".bank-list .bank-item").first().data("stk");
   var qr_image = `https://img.vietqr.io/image/${bankName}-${bankNumber}-${qrType}.png`;
   $(".qr-code-img").attr("src", qr_image);
-  $(".bank-list .bank-item").first().find(".icon").clone().prependTo(".icon-bank-inner");
+  $(".bank-list .bank-item")
+    .first()
+    .find(".icon")
+    .clone()
+    .prependTo(".icon-bank-inner");
   $(".bank-list .bank-item").first().addClass("active");
   $(".bank-list").on("click", ".bank-item", function () {
     let bankName = $(this).data("bank");
@@ -19,5 +23,22 @@ jQuery(document).ready(function ($) {
     }
     $(".qr-code-img").attr("src", qr_image);
     $(this).find(".icon").clone().prependTo(".icon-bank-inner");
+  });
+
+  var clipboard = new ClipboardJS(".copy-btn");
+  function setTooltip(btn, message) {
+    var btn_text_old = $(btn).text();
+    $(btn).text(message);
+    setTimeout(function () {
+      $(btn).text(btn_text_old);
+    }, 2000);
+  }
+  clipboard.on("success", function (e) {
+    e.clearSelection();
+    setTooltip(e.trigger, "Đã sao chép!");
+  });
+  clipboard.on("error", function (e) {
+    e.clearSelection();
+    setTooltip(e.trigger, "Thất bại!");
   });
 });

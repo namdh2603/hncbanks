@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +17,6 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
 </head>
-
 <body>
     <header id="masthead" class="site-header">
         <div class="container">
@@ -44,42 +42,56 @@
                             <div class="field__label me-3">Tên TK:</div>
                             <div class="">ĐÀO HẢI NAM</div>
                         </div>
-                        <div class="note fw-bold">Click vào để hiển thị QR</div>
+                        <div class="note fw-bold">Click vào ngân hàng bên dưới để hiển thị QR</div>
                         <div class="mb-2"></div>
                         <div class="bank-item mb-2" data-bank="BIDV" data-stk="13310000015224">
                             <div class="d-flex align-items-center mb-2">
                                 <img class="icon icon-bank" src="images/BIDV.png" />
                                 <div class="field__label text-decoration-underline ms-3">Ngân hàng BIDV</div>
                             </div>
-                            <div class="field__value fw-bold text-h3">STK: 13310000015224</div>
+                            <div class="field__value fw-bold text-h3">STK: <span id="stk-bidv">13310000015224</span>
+                            </div>
+                            <div class="copy-btn" data-clipboard-target="#stk-bidv">Sao chép STK</div>
                         </div>
                         <div class="bank-item mb-2" data-bank="VCB" data-stk="0071001097616">
                             <div class="d-flex align-items-center mb-2">
                                 <img class="icon icon-bank" src="images/VCB.png" />
                                 <div class="field__label text-decoration-underline ms-3">Ngân hàng VIETCOMBANK</div>
                             </div>
-                            <div class="field__value fw-bold text-h3">STK: 0071001097616</div>
+                            <div class="field__value fw-bold text-h3">STK: <span
+                                    id="stk-vietcombank">0071001097616</span>
+                            </div>
+                            <div class="copy-btn" data-clipboard-target="#stk-vietcombank">Sao chép STK</div>
                         </div>
                         <div class="bank-item mb-2" data-bank="TCB" data-stk="19034497350010">
                             <div class="d-flex align-items-center mb-2">
                                 <img class="icon icon-bank" src="images/TCB.png" />
                                 <div class="field__label text-decoration-underline ms-3">Ngân hàng TECHCOMBANK</div>
                             </div>
-                            <div class="field__value fw-bold text-h3">STK: 19034497350010</div>
+                            <div class="field__value fw-bold text-h3">STK: <span
+                                    id="stk-techcombank">19034497350010</span>
+                            </div>
+                            <div class="copy-btn" data-clipboard-target="#stk-techcombank">Sao chép STK</div>
                         </div>
                         <div class="bank-item mb-3" data-bank="MOMO" data-url="images/momo-qr.jpg">
                             <div class="d-flex align-items-center mb-2">
                                 <img class="icon icon-momo" src="images/momo_icon.png" />
                                 <div class="field__label text-decoration-underline ms-3">Ví điện tử MOMO</div>
                             </div>
-                            <div class="field__value fw-bold text-h3">SĐT: 0363759943</div>
+                            <div class="field__value fw-bold text-h3">SĐT: <span id="stk-momo">0363759943</span></div>
+                            <div class="copy-btn" data-clipboard-target="#stk-momo">Sao chép SĐT</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <!-- <script src="assets/bootstrap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="assets/clipboard.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
-
 </html>
