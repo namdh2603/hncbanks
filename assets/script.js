@@ -25,6 +25,13 @@ jQuery(document).ready(function ($) {
     $(this).find(".icon").clone().prependTo(".icon-bank-inner");
   });
   var clipboard_bankitem = new ClipboardJS('.bank-item');
+  clipboard_bankitem.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
   var clipboard = new ClipboardJS(".copy-btn");
   function setTooltip(btn, message) {
     var btn_text_old = $(btn).text();
