@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     $(".qr-code-img").attr("src", qr_image);
     $(this).find(".icon").clone().prependTo(".icon-bank-inner");
   });
-
+  var clipboard_bankitem = new ClipboardJS('.bank-item');
   var clipboard = new ClipboardJS(".copy-btn");
   function setTooltip(btn, message) {
     var btn_text_old = $(btn).text();
