@@ -33,6 +33,9 @@ main {
   background-color: #393E46;
   overflow: hidden;
   position: relative;
+  min-height: calc(100vh - 81px);
+  display: flex;
+  align-items: center;
 }
 .text-h1 {
   font-size: 2.2rem;
