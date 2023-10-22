@@ -2,7 +2,8 @@
 ::after,
 ::before {
   /* font-family: 'Lexend Deca', sans-serif; */
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Rubik', sans-serif;
+  /* font-family: 'Baloo 2', cursive; */
   color: #fff;
 }
 img{
@@ -38,13 +39,13 @@ main {
   align-items: center;
 }
 .text-h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .text-h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 .text-h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .bank-item {
   border-radius: 1rem;
@@ -73,7 +74,20 @@ main {
   overflow: hidden;
   position: relative;
   background: #fff;
-  padding: 20px;
+  padding: 10px;
+  border: 10px solid #006c68;
+}
+.qr-code[bank="BIDV"]{
+  border-color:#006c68;
+}
+.qr-code[bank="VCB"]{
+  border-color:#097446;
+}
+.qr-code[bank="TCB"]{
+  border-color:#eb2125;
+}
+.qr-code[bank="MOMO"]{
+  border-color:#a50064;
 }
 .qr-code .icon-bank-inner{
   display: flex;
@@ -91,7 +105,7 @@ main {
   font-size: 14px;
   position: absolute;
   right: 1.5rem;
-  bottom: 1rem;
+  bottom: 0.8rem;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 1px -2px, rgba(0, 0, 0, .14) 0 2px 2px 0, rgba(0, 0, 0, .12) 0 1px 5px 0;
   cursor: pointer;

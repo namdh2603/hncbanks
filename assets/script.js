@@ -23,6 +23,8 @@ jQuery(document).ready(function ($) {
     }
     $(".qr-code-img").attr("src", qr_image);
     $(this).find(".icon").clone().prependTo(".icon-bank-inner");
+
+    $(".qr-code").attr('bank', bankName);
   });
   var clipboard_bankitem = new ClipboardJS('.bank-item');
   clipboard_bankitem.on('success', function(e) {
