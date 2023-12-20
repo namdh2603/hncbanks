@@ -23,17 +23,15 @@ jQuery(document).ready(function ($) {
     }
     $(".qr-code-img").attr("src", qr_image);
     $(this).find(".icon").clone().prependTo(".icon-bank-inner");
-
-    $(".qr-code").attr('bank', bankName);
+    $(".qr-code").attr("bank", bankName);
   });
-  var clipboard_bankitem = new ClipboardJS('.bank-item');
-  clipboard_bankitem.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
-});
+  // var clipboard_bankitem = new ClipboardJS(".bank-item");
+  // clipboard_bankitem.on("success", function (e) {
+  //   console.info("Action:", e.action);
+  //   console.info("Text:", e.text);
+  //   console.info("Trigger:", e.trigger);
+  //   e.clearSelection();
+  // });
   var clipboard = new ClipboardJS(".copy-btn");
   function setTooltip(btn, message) {
     var btn_text_old = $(btn).text();
@@ -50,4 +48,14 @@ jQuery(document).ready(function ($) {
     e.clearSelection();
     setTooltip(e.trigger, "Thất bại!");
   });
+});
+$(".bank-list").on("click", ".bank-item", function () {
+  var $temp = $("<textarea>");
+  $("body").append($temp);
+  var html = $(this).find(".detail-bank-text").html();
+  // console.log(html);
+  html = html.replace(/<br>/g, "\n"); // or \r\n
+  $temp.val(html).select();
+  document.execCommand("copy");
+  $temp.remove();
 });
