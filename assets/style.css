@@ -111,6 +111,6 @@ main {
   cursor: pointer;
   padding: 3px 6px;
   background: #00adb5;
-  z-index: 999999999;
+  z-index: 999;
 
 }

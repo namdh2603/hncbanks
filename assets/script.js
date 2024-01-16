@@ -49,7 +49,8 @@ jQuery(document).ready(function ($) {
     setTooltip(e.trigger, "Thất bại!");
   });
 });
-$(".bank-list").on("click", ".bank-item", function () {
+$(".bank-list").on("click", ".bank-item", function () { 
+  $('#bankModal').modal('show');
   var $temp = $("<textarea>");
   $("body").append($temp);
   var html = $(this).find(".detail-bank-text").html();
@@ -58,4 +59,5 @@ $(".bank-list").on("click", ".bank-item", function () {
   $temp.val(html).select();
   document.execCommand("copy");
   $temp.remove();
+  setTimeout(function() {$('#bankModal').modal('hide');}, 3000);
 });
