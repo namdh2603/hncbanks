@@ -50,14 +50,15 @@ jQuery(document).ready(function ($) {
   });
 });
 $(".bank-list").on("click", ".bank-item", function () { 
-  $('#bankModal').modal('show');
   var $temp = $("<textarea>");
   $("body").append($temp);
   var html = $(this).find(".detail-bank-text").html();
+  $('#bankModal').modal('show');
+  $('#bankModal').find('.info').html(html);
   // console.log(html);
   html = html.replace(/<br>/g, "\n"); // or \r\n
   $temp.val(html).select();
   document.execCommand("copy");
   $temp.remove();
-  setTimeout(function() {$('#bankModal').modal('hide');}, 3000);
+  setTimeout(function() {$('#bankModal').modal('hide');}, 1000);
 });
